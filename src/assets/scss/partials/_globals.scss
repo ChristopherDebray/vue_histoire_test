@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-grey);
+}
+
+* {
+  box-sizing: border-box;
+  @each $name, $color in $colorVariants {
+    &[class*=--#{$name}] {
+      --bg-color: #{$color};
+      @if (lightness($color) > 50) {
+        --bg-color-hover: #{lighten($color, 10%)};
+      } @else {
+        --bg-color-hover: #{darken($color, 10%)};
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: rem(24);
+}
+
+h2 {
+  font-size: rem(16);
+}
+
+p {
+  color: var(--light-grey);
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  section {
+    max-width: 80%;
+  }
+}
+
+.bg {
+  background-color: var(--bg-color);
+}
+
+.wh-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.rounded {
+  @each $name, $value in $roundedVariants {
+    &--#{$name} {
+      @include border-radius($value);
+    }
+  }
+}

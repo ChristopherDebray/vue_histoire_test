@@ -1,0 +1,26 @@
+.button {
+  padding: 1em;
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  font-size: inherit;
+  line-height: 1;
+  display: inline-block;
+	outline: inherit;
+  transition: 0.1s;
+  background-color: var(--bg-color);
+  min-width: 80px;
+  @include border-radius(map-get($roundedVariants, "full"));
+  &:hover {
+    background-color: var(--bg-color-hover);
+  }
+
+  @each $size, $value in $buttonSizes {
+    &--#{$size} {
+      width: $value !important;
+    }
+  }
+}

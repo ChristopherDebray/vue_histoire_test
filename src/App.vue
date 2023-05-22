@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import BaseButton from './components/buttons/BaseButton.vue';
 </script>
 
 <template>
-  <div>Hi</div>
+  <div class="bg bg--danger">
+    Hi
+    <BaseButton />
+  </div>
 </template>
 
 <style scoped lang="scss">
-div {
-  background: black;
-}
+@import "./assets/scss/main.scss";
 </style>

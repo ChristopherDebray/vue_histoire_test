@@ -1,0 +1,52 @@
+$white: #FFF;
+$grey: #AAA;
+$light-grey: #F2F2F2;
+$dark-grey: #444;
+$red: #ce0a0a;
+$green: #31aa66;
+$info: dodgerblue;
+$secondary: gray;
+$disabled: gray;
+$warning: rgb(229, 162, 5);
+$gridColumnGap: 5px;
+
+$buttonSizes: (
+  "small": 4em,
+  "medium": 8em,
+  "big": 12em,
+);
+
+$roundedVariants: (
+  "none": 0px,
+  "sm": 5px,
+  "md": 10px,
+  "full": 99999px,
+);
+
+$breakpoint: (
+  "sm": 640px,
+  "md": 960px,
+  "lg": 1280px,
+);
+
+$colorVariants: (
+  'success': $green,
+  'danger': $red,
+  'info': $info,
+  'warning': $warning,
+  'secondary': $secondary,
+  'disabled': $disabled,
+);
+
+:root {
+  --white: #{$white};
+  --grey: #{$grey};
+  --light-grey: #{$light-grey};
+  --dark-grey: #{$dark-grey};
+  --red: #{$red};
+  --green: #{$green};
+  --bg-color: $grey;
+  --grid-column-gap: 5px;
+
+  --bg-color-hover: #{lighten($grey, 10%)};
+}
